@@ -251,7 +251,7 @@ Partial Class FlexEdit
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(182, 20)
         Me.Label6.TabIndex = 1
-        Me.Label6.Text = "FlexEdit 1.0.6 ALPHA"
+        Me.Label6.Text = "FlexEdit 1.0.7 ALPHA"
         '
         'button_makesvwd
         '
