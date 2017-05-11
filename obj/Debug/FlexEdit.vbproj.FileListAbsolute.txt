@@ -25,3 +25,19 @@ C:\vb proj\FlexEdit\FlexEdit\obj\Debug\FlexEdit.vbprojResolveAssemblyReference.c
 C:\vb proj\FlexEdit\FlexEdit\obj\Debug\FlexEdit.TrustInfo.xml
 C:\vb proj\FlexEdit\FlexEdit\obj\Debug\FlexEdit.exe.manifest
 C:\vb proj\FlexEdit\FlexEdit\obj\Debug\FlexEdit.application
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.exe.config
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.exe.manifest
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.application
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.exe
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.pdb
+D:\Github Repo (NGX EXE)\FlexEdit\bin\Debug\FlexEdit.xml
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.vbprojResolveAssemblyReference.cache
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.FlexEdit.resources
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.Resources.resources
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.vbproj.GenerateResource.Cache
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.TrustInfo.xml
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.exe.manifest
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.application
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.exe
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.xml
+D:\Github Repo (NGX EXE)\FlexEdit\obj\Debug\FlexEdit.pdb

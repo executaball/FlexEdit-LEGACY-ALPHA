@@ -151,11 +151,11 @@ Public Class FlexEdit
 
             'error handling
         Catch z As Exception
-            MsgBox("Error parsing Saveword 1. Perhaps you have entered it incorrectly? Error: " & z.Message)
+            MsgBox("Error parsing Saveword Part 1. Perhaps you have entered it incorrectly? Exception details: " & z.Message, vbCritical, "Critical Error")
 
             SaveLoadCompleted2 = False
 
-            MsgBox("Saveword 1 has not been loaded. Savewords 2 and 3 will not be attempted.")
+            MsgBox("Saveword Part 1 has not been loaded. Savewords Part 2 and Part 3 will not be attempted.", vbExclamation, "Caution")
 
 
             'disabling tabs and buttons
@@ -189,11 +189,11 @@ Public Class FlexEdit
 
                 'error handling
             Catch z As Exception
-                MsgBox("Error parsing Saveword 2. Perhaps you have entered it incorrectly? Error: " & z.Message)
+                MsgBox("Error parsing Saveword Part 2. Perhaps you have entered it incorrectly? Exception details: " & z.Message, vbCritical, "Critical Error")
 
                 SaveLoadCompleted2 = False
 
-                MsgBox("Saveword 2 has not been loaded.")
+                MsgBox("Saveword Part 2 has not been loaded. Saveword Part 3 will not be attempted.", vbExclamation, "Caution")
 
                 'disabling tabs and buttons
 
@@ -227,11 +227,12 @@ Public Class FlexEdit
 
                 'error handling
             Catch z As Exception
-                MsgBox("Error parsing Saveword 3. Perhaps you have entered it incorrectly? Error: " & z.Message)
+
+                MsgBox("Error parsing Saveword Part 3. Perhaps you have entered it incorrectly? Exception details: " & z.Message, vbCritical, "Critical Error")
 
                 SaveLoadCompleted3 = False
 
-                MsgBox("Saveword 3 has not been loaded.")
+                MsgBox("Saveword Part 3 has not been loaded.")
 
                 'disabling tabs and buttons
 
@@ -251,7 +252,7 @@ Public Class FlexEdit
         'determine finishing tasks whether saveword loaded or not
         If SaveLoadCompleted1 = True Then
 
-            MsgBox("Saveword 1 loading complete!")
+            MsgBox("Saveword Part 1 import complete!", vbInformation, "Import success")
             LabelSaveStatus.Text = "Saveword Loaded"
             LabelSaveStatus.ForeColor = Color.Olive
 
@@ -264,7 +265,7 @@ Public Class FlexEdit
 
         If SaveLoadCompleted2 = True AndAlso savewords > 1 Then
 
-            MsgBox("Saveword 2 loading complete!")
+            MsgBox("Saveword Part 2 import complete!", vbInformation, "Import success")
             LabelSaveStatus.Text = "Saveword1,2 Loaded"
             LabelSaveStatus.ForeColor = Color.Olive
 
@@ -276,7 +277,7 @@ Public Class FlexEdit
 
         If SaveLoadCompleted3 = True AndAlso savewords = 3 Then
 
-            MsgBox("Saveword 3 loading complete!")
+            MsgBox("Saveword Part 3 import complete!", vbInformation, "Import success")
             LabelSaveStatus.Text = "Saveword1,2,3 Loaded"
             LabelSaveStatus.ForeColor = Color.Olive
 
@@ -284,7 +285,7 @@ Public Class FlexEdit
 
         ElseIf SaveLoadCompleted3 = False And savewords = 3 Then
 
-            MsgBox("Saveword 3 has not been loaded.")
+            MsgBox("Saveword 3 has not been loaded. Savewords 1 and 2 are loaded normally. You can use the program as is or try loading saveword 3 again.", vbExclamation, "Caution")
 
         End If
 
@@ -351,9 +352,16 @@ Public Class FlexEdit
 
     Private Sub button_makesvwd_Click(sender As Object, e As EventArgs) Handles button_makesvwd.Click
 
-        'Terminate if detected database is empty, avoided NullException as of Rev 6 (1.0.6)
+        'Terminate if detected database is empty (2.0 safeguard) (improved from v1.0.6)
 
-        If Not LabelSaveStatus.Text = "Saveword not loaded" Then
+        If LabelSaveStatus.Text = "Saveword not loaded" Or LabelSaveStatus.Text = "Saveword Exported" Then
+
+            MsgBox("No saveword detected in memory. Please load a saveword first.", vbExclamation, "Error")
+
+            Return
+
+        Else
+
 
             'Firstly join textboxes into database
 
@@ -434,7 +442,7 @@ Public Class FlexEdit
                         boxSaveword1.Text = boxSaveword1.Text + sval
 
                     ElseIf ngxcounter > 60 Then
-                        MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 1, program terminating to avoid further issues.")
+                        MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 1, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
                         End
 
                     End If
@@ -444,11 +452,11 @@ Public Class FlexEdit
 
             Catch z As Exception
 
-                MsgBox("Error recreating saveword 1. Exception details: " & z.Message)
+                MsgBox("Error recreating saveword 1. Exception details: " & z.Message, vbCritical, "Critical Error")
 
             End Try
 
-            'SPECIAL for saveword 2
+            'Only runs when loading 2 or 3 savewords. Exports saveword 2
             If savewords > 1 Then
 
                 boxSaveword2.Text = "chantpartA}" 'first time, out of the loop
@@ -473,7 +481,7 @@ Public Class FlexEdit
                             boxSaveword2.Text = boxSaveword2.Text + sval2
 
                         ElseIf ngxcounter2 > 162 Then
-                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues.")
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
                             End
 
                         End If
@@ -483,13 +491,13 @@ Public Class FlexEdit
 
                 Catch z As Exception
 
-                    MsgBox("Error recreating saveword 2. Exception details: " & z.Message)
+                    MsgBox("Error recreating saveword 2. Exception details: " & z.Message, vbCritical, "Critical Error")
 
                 End Try
 
             End If
 
-            'SPECIAL for saveword 3
+            'Only runs when loading 2 or 3 savewords. Exports saveword 3
             If savewords = 3 Then
 
                 boxSaveword3.Text = "chantpartB}" 'first time, out of the loop
@@ -514,7 +522,7 @@ Public Class FlexEdit
                             boxSaveword3.Text = boxSaveword3.Text + sval3
 
                         ElseIf ngxcounter3 > 225 Then
-                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues.")
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 3, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
                             End
 
                         End If
@@ -524,7 +532,7 @@ Public Class FlexEdit
 
                 Catch z As Exception
 
-                    MsgBox("Error recreating saveword 2. Exception details: " & z.Message)
+                    MsgBox("Error recreating saveword 3. Exception details: " & z.Message, vbCritical, "Critical Error")
 
                 End Try
 
@@ -535,7 +543,7 @@ Public Class FlexEdit
             LabelSaveStatus.Text = "Saveword Exported"
             LabelSaveStatus.ForeColor = Color.Blue
 
-            MsgBox("Saveword successfully exported.")
+            MsgBox("Saveword successfully exported.", vbInformation, "Export success")
 
 
 
@@ -554,10 +562,6 @@ Public Class FlexEdit
             but_copy_3.Enabled = True
 
 
-        Else
-
-            MsgBox("Sorry, please load a saveword first.")
-
         End If
 
 
@@ -567,7 +571,7 @@ Public Class FlexEdit
     Private Sub button_unlockclear_Click(sender As Object, e As EventArgs) Handles button_unlockclear.Click
 
 
-        Select Case MsgBox("Unlocking buttons and clearing memory. Are you sure?", MsgBoxStyle.OkCancel, "Clearing Memory")
+        Select Case MsgBox("Unlocking buttons and clearing memory. Are you sure?", vbOKCancel + vbQuestion, "Clearing Memory")
             Case MsgBoxResult.Ok
 
 
@@ -630,7 +634,7 @@ Public Class FlexEdit
 
             If strSaveword1 = My.Computer.Clipboard.GetText() Then
 
-                MsgBox("Copied to clipboard")
+                MsgBox("Copied to clipboard", vbInformation, "Copy success")
 
             Else
 
@@ -640,7 +644,7 @@ Public Class FlexEdit
 
 
         Catch z As Exception
-            MsgBox("Error when copying to clipboard. Details: " & z.Message)
+            MsgBox("Error when copying to clipboard. Details: " & z.Message, vbCritical, "Critical Error")
 
         End Try
 
@@ -656,7 +660,7 @@ Public Class FlexEdit
 
             If strSaveword2 = My.Computer.Clipboard.GetText() Then
 
-                MsgBox("Copied to clipboard")
+                MsgBox("Copied to clipboard", vbInformation, "Copy success")
 
             Else
 
@@ -666,7 +670,7 @@ Public Class FlexEdit
 
 
         Catch z As Exception
-            MsgBox("Error when copying to clipboard. Details: " & z.Message)
+            MsgBox("Error when copying to clipboard. Details: " & z.Message, vbCritical, "Critical Error")
 
         End Try
 
@@ -682,17 +686,17 @@ Public Class FlexEdit
 
             If strSaveword3 = My.Computer.Clipboard.GetText() Then
 
-                MsgBox("Copied to clipboard")
+                MsgBox("Copied to clipboard", vbInformation, "Copy success")
 
             Else
 
-                MsgBox("Copying to clipboard failed on selfcheck routine but did not trigger exception. This is not supposed to happen. You might have software interfering with clipboard access.")
+                MsgBox("Copying to clipboard failed on selfcheck routine but did not trigger exception. This is not supposed to happen. You might have software interfering with clipboard access.", vbCritical, "Critical Error")
 
             End If
 
 
         Catch z As Exception
-            MsgBox("Error when copying to clipboard. Details: " & z.Message)
+            MsgBox("Error when copying to clipboard. Details: " & z.Message, vbCritical, "Critical Error")
 
         End Try
 
