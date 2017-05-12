@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FlexEdit.exe" size="857088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FlexEdit.exe" size="957440">
       <assemblyIdentity name="FlexEdit" version="1.0.6.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RDjsqLfLoiYdvGDTZEGPyV4a4rAR/V3ljJ76E6crtgU=</dsig:DigestValue>
+        <dsig:DigestValue>2LIoksPh0fuWJqfnRR4Rb+TW4vuJsRQ0eu1O4XVm3f4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
