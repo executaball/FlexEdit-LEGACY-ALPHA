@@ -112,7 +112,7 @@ Partial Class Form1
         Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Nothing
+        Me.BunifuFlatButton1.Iconimage = CType(resources.GetObject("BunifuFlatButton1.Iconimage"), System.Drawing.Image)
         Me.BunifuFlatButton1.Iconimage_right = Nothing
         Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
         Me.BunifuFlatButton1.Iconimage_Selected = Nothing
@@ -121,7 +121,7 @@ Partial Class Form1
         Me.BunifuFlatButton1.IconRightVisible = True
         Me.BunifuFlatButton1.IconRightZoom = 0R
         Me.BunifuFlatButton1.IconVisible = True
-        Me.BunifuFlatButton1.IconZoom = 90.0R
+        Me.BunifuFlatButton1.IconZoom = 50.0R
         Me.BunifuFlatButton1.IsTab = True
         Me.BunifuFlatButton1.Location = New System.Drawing.Point(4, 221)
         Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -188,7 +188,7 @@ Partial Class Form1
         Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton2.Iconimage = Nothing
+        Me.BunifuFlatButton2.Iconimage = CType(resources.GetObject("BunifuFlatButton2.Iconimage"), System.Drawing.Image)
         Me.BunifuFlatButton2.Iconimage_right = Nothing
         Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
         Me.BunifuFlatButton2.Iconimage_Selected = Nothing
@@ -197,7 +197,7 @@ Partial Class Form1
         Me.BunifuFlatButton2.IconRightVisible = True
         Me.BunifuFlatButton2.IconRightZoom = 0R
         Me.BunifuFlatButton2.IconVisible = True
-        Me.BunifuFlatButton2.IconZoom = 90.0R
+        Me.BunifuFlatButton2.IconZoom = 50.0R
         Me.BunifuFlatButton2.IsTab = True
         Me.BunifuFlatButton2.Location = New System.Drawing.Point(0, 304)
         Me.BunifuFlatButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -223,7 +223,7 @@ Partial Class Form1
         Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = Nothing
+        Me.BunifuFlatButton3.Iconimage = CType(resources.GetObject("BunifuFlatButton3.Iconimage"), System.Drawing.Image)
         Me.BunifuFlatButton3.Iconimage_right = Nothing
         Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
         Me.BunifuFlatButton3.Iconimage_Selected = Nothing
@@ -232,7 +232,7 @@ Partial Class Form1
         Me.BunifuFlatButton3.IconRightVisible = True
         Me.BunifuFlatButton3.IconRightZoom = 0R
         Me.BunifuFlatButton3.IconVisible = True
-        Me.BunifuFlatButton3.IconZoom = 90.0R
+        Me.BunifuFlatButton3.IconZoom = 50.0R
         Me.BunifuFlatButton3.IsTab = True
         Me.BunifuFlatButton3.Location = New System.Drawing.Point(0, 387)
         Me.BunifuFlatButton3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -258,7 +258,7 @@ Partial Class Form1
         Me.BunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton4.Iconimage = Nothing
+        Me.BunifuFlatButton4.Iconimage = CType(resources.GetObject("BunifuFlatButton4.Iconimage"), System.Drawing.Image)
         Me.BunifuFlatButton4.Iconimage_right = Nothing
         Me.BunifuFlatButton4.Iconimage_right_Selected = Nothing
         Me.BunifuFlatButton4.Iconimage_Selected = Nothing
@@ -267,7 +267,7 @@ Partial Class Form1
         Me.BunifuFlatButton4.IconRightVisible = True
         Me.BunifuFlatButton4.IconRightZoom = 0R
         Me.BunifuFlatButton4.IconVisible = True
-        Me.BunifuFlatButton4.IconZoom = 90.0R
+        Me.BunifuFlatButton4.IconZoom = 50.0R
         Me.BunifuFlatButton4.IsTab = True
         Me.BunifuFlatButton4.Location = New System.Drawing.Point(0, 470)
         Me.BunifuFlatButton4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -293,7 +293,7 @@ Partial Class Form1
         Me.BunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton5.Iconimage = Nothing
+        Me.BunifuFlatButton5.Iconimage = CType(resources.GetObject("BunifuFlatButton5.Iconimage"), System.Drawing.Image)
         Me.BunifuFlatButton5.Iconimage_right = Nothing
         Me.BunifuFlatButton5.Iconimage_right_Selected = Nothing
         Me.BunifuFlatButton5.Iconimage_Selected = Nothing
@@ -302,7 +302,7 @@ Partial Class Form1
         Me.BunifuFlatButton5.IconRightVisible = True
         Me.BunifuFlatButton5.IconRightZoom = 0R
         Me.BunifuFlatButton5.IconVisible = True
-        Me.BunifuFlatButton5.IconZoom = 90.0R
+        Me.BunifuFlatButton5.IconZoom = 50.0R
         Me.BunifuFlatButton5.IsTab = True
         Me.BunifuFlatButton5.Location = New System.Drawing.Point(0, 553)
         Me.BunifuFlatButton5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
