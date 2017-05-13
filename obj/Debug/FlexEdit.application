@@ -7,14 +7,14 @@
     <framework targetVersion="4.7" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="FlexEdit.exe.manifest" size="7752">
+    <dependentAssembly dependencyType="install" codebase="FlexEdit.exe.manifest" size="6330">
       <assemblyIdentity name="FlexEdit.exe" version="1.0.7.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OANjV/4XnLJT2TuA4pnSGyapwrT+fC3QwVa2Rp+rQXk=</dsig:DigestValue>
+        <dsig:DigestValue>Bj0irCyrpY/9NEnoqL9TqtAyNNRR+H+XOIqOHt14dro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.FlexEdit.Form2
+            Me.MainForm = Global.FlexEdit.Form1
         End Sub
     End Class
 End Namespace
